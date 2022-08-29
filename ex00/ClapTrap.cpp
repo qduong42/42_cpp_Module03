@@ -35,22 +35,22 @@ ClapTrap::~ClapTrap()
 
 //	MEMBER FUNCTIONS
 
-std::string ClapTrap::getName()const
+std::string const& ClapTrap::getName()const
 {
 	return (this->_name);
 }
 
-unsigned int ClapTrap::getHpoints()const
+unsigned int const& ClapTrap::getHpoints()const
 {
 	return (this->_hpoints);
 }
 
-unsigned int ClapTrap::getEpoints()const
+unsigned int const& ClapTrap::getEpoints()const
 {
 	return (this->_epoints);
 }
 
-unsigned int ClapTrap::getAtkdmg()const
+unsigned int const& ClapTrap::getAtkdmg()const
 {
 	return (this->_atkdmg);
 }
@@ -60,17 +60,17 @@ void ClapTrap::setName(std::string name)
 	this->_name = name;
 }
 
-void ClapTrap::setHpoints(unsigned int hpoints)
+void ClapTrap::setHpoints(unsigned int const& hpoints)
 {
 	this->_hpoints = hpoints;
 }
 
-void ClapTrap::setEpoints(unsigned int epoints)
+void ClapTrap::setEpoints(unsigned int const& epoints)
 {
 	this->_epoints = epoints;
 }
 
-void ClapTrap::setAtkdmg(unsigned int atkdmg)
+void ClapTrap::setAtkdmg(unsigned int const& atkdmg)
 {
 	this->_atkdmg = atkdmg;
 }
@@ -123,4 +123,13 @@ void ClapTrap::beRepaired(unsigned int amount)
 		this->setHpoints(_hpoints + amount);
 		std::cout << "Clap trap " << this->getName() << " was repaired for " << amount << " HP!" << std::endl;
 	}
+}
+
+void	printClapTrapStat(ClapTrap& ClapTrap) 
+{
+	std::cout << "\n=====ClapTrap " << ClapTrap.getName() << "'s stats=====" << std::endl;
+	std::cout << "Hit points: " << ClapTrap.getHpoints() << std::endl;
+	std::cout << "Energy points: " << ClapTrap.getEpoints() << std::endl;
+	std::cout << "Attack damage: " << ClapTrap.getAtkdmg() << std::endl;
+	std::cout << "======================================\n" << std::endl;
 }

@@ -15,14 +15,14 @@ class ClapTrap
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		std::string getName()const;
-		unsigned int getHpoints()const;
-		unsigned int getEpoints()const;
-		unsigned int getAtkdmg()const;
+		std::string const& getName()const;
+		unsigned int const& getHpoints()const;
+		unsigned int const& getEpoints()const;
+		unsigned int const& getAtkdmg()const;
 		void setName(std::string name);
-		void setHpoints(unsigned int hpoints);
-		void setEpoints(unsigned int epoints);
-		void setAtkdmg(unsigned int atkdmg);
+		void setHpoints(unsigned int const& hpoints);
+		void setEpoints(unsigned int const& epoints);
+		void setAtkdmg(unsigned int const& atkdmg);
 
 	private:
 
@@ -31,5 +31,7 @@ class ClapTrap
 		unsigned int		_hpoints;
 		unsigned int		_epoints;
 };
+
+void	printClapTrapStat(ClapTrap& ClapTrap);
 
 #endif
