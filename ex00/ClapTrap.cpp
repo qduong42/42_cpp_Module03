@@ -1,0 +1,126 @@
+#include "ClapTrap.hpp"
+
+//	CONSTRUCTORS | DESTRUCTOR
+
+ClapTrap::ClapTrap(std::string name):_name(name), _atkdmg(0), _hpoints(10), _epoints(10)
+{
+	std::cout << "BEEP BOOP Claptrap " << this->getName() << " activated!" << std::endl;
+}
+
+ClapTrap::ClapTrap():_name("unknown"),  _atkdmg(0), _hpoints(0), _epoints(0)
+{
+	std::cout << "Default Claptrap " << this->getName() << " activated!" << std::endl;
+}
+
+
+ClapTrap::ClapTrap(ClapTrap const& obj)
+{*this = obj;}
+
+ClapTrap& ClapTrap::operator=(ClapTrap const& obj)
+{
+	if (this != &obj)
+	{
+		this->setHpoints(obj.getHpoints());
+		this->setEpoints(obj.getEpoints());
+		this->setAtkdmg(obj.getAtkdmg());
+		this->setName(obj.getName());
+	}
+	return (*this);
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "Claptrap " << this->getName() << " has been destroyed" << std::endl;
+}
+
+//	MEMBER FUNCTIONS
+
+std::string ClapTrap::getName()const
+{
+	return (this->_name);
+}
+
+unsigned int ClapTrap::getHpoints()const
+{
+	return (this->_hpoints);
+}
+
+unsigned int ClapTrap::getEpoints()const
+{
+	return (this->_epoints);
+}
+
+unsigned int ClapTrap::getAtkdmg()const
+{
+	return (this->_atkdmg);
+}
+
+void ClapTrap::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void ClapTrap::setHpoints(unsigned int hpoints)
+{
+	this->_hpoints = hpoints;
+}
+
+void ClapTrap::setEpoints(unsigned int epoints)
+{
+	this->_epoints = epoints;
+}
+
+void ClapTrap::setAtkdmg(unsigned int atkdmg)
+{
+	this->_atkdmg = atkdmg;
+}
+
+void ClapTrap::attack(const std::string& target)
+{
+	if (this->getEpoints() < 1)
+	{
+		std::cout << "Not enough Energy Points to attack!" << std::endl;
+	}
+	if (this->getHpoints() <= 0)
+	{
+		std::cout << "Clap Trap " << this->getName() << " is already dead" << std::endl;
+	}
+	else
+	{
+		std::cout << "ClapTrap " << this->getName() << " attacks " << target 
+				  << " , causing " << this->getAtkdmg() << " points of damage!" << std::endl;
+		this->setEpoints(_epoints - 1);
+	}
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	if (this->getHpoints() <= 0)
+		std::cout << "ClapTrap " << this->getName() << " is already dead!" << std::endl;
+	else
+	{
+		if (amount > this->getHpoints())
+		{
+			std::cout << "ClapTrap " << this->getName() << " took " << this->getHpoints() << " damage!" << std::endl;
+			this->setHpoints(0);
+		}
+		else
+		{
+			std::cout << "ClapTrap " << this->getName() << " took " << amount << " damage!" << std::endl;
+			this->setHpoints(this->_hpoints - amount);			
+		}
+	}
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	if (this->getEpoints() < 1)
+	{
+		std::cout << "Not enough Energy Points to be repaired!" << std::endl;
+	}
+	else
+	{
+		this->setHpoints(_hpoints + amount);
+		std::cout << "Clap trap " << this->getName() << " was repaired for " << amount << " HP!" << std::endl;
+	}
+}
