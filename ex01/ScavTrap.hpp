@@ -16,7 +16,6 @@ class ScavTrap:public ClapTrap
 
 	private:
 
-		std::string _name;
 };
 
 #endif

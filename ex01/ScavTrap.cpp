@@ -4,10 +4,9 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	this->_name = "Sam";
 	std::cout << "ScavTrap " << this->ClapTrap::getName() << " has been created" << std::endl;
-	// std::cout << this->_name << this->ClapTrap::_name << std::endl;
-	printClapTrapStat(*this);
+	std::cout << this->ClapTrap::_name << std::endl;
+	// printClapTrapStat(*this);
 }
 
 ScavTrap::ScavTrap(ScavTrap const& obj) :ClapTrap()

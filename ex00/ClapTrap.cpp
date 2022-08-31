@@ -20,10 +20,10 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& obj)
 {
 	if (this != &obj)
 	{
+		this->setName(obj.getName());
+		this->setAtkdmg(obj.getAtkdmg());
 		this->setHpoints(obj.getHpoints());
 		this->setEpoints(obj.getEpoints());
-		this->setAtkdmg(obj.getAtkdmg());
-		this->setName(obj.getName());
 	}
 	return (*this);
 }

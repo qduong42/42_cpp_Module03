@@ -20,9 +20,9 @@ class ClapTrap
 		unsigned int const& getEpoints()const;
 		unsigned int const& getAtkdmg()const;
 		void setName(std::string name);
+		void setAtkdmg(unsigned int const& atkdmg);
 		void setHpoints(unsigned int const& hpoints);
 		void setEpoints(unsigned int const& epoints);
-		void setAtkdmg(unsigned int const& atkdmg);
 
 	private:
 
