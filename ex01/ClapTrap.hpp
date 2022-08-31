@@ -24,7 +24,7 @@ class ClapTrap
 		void setHpoints(unsigned int const& hpoints);
 		void setEpoints(unsigned int const& epoints);
 
-	private:
+	protected:
 
 		std::string			_name;
 		unsigned int		_atkdmg;
