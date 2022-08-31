@@ -6,11 +6,11 @@
 #    By: qduong <qduong@students.42wolfsburg.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 00:41:55 by qduong            #+#    #+#              #
-#    Updated: 2022/08/30 01:19:11 by qduong           ###   ########.fr        #
+#    Updated: 2022/08/31 23:26:29 by qduong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := claptrap
+NAME := claptrap.bi
 
 CC := c++
 

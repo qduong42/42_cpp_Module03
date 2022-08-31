@@ -6,11 +6,11 @@
 #    By: qduong <qduong@students.42wolfsburg.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 00:41:55 by qduong            #+#    #+#              #
-#    Updated: 2022/08/31 23:21:35 by qduong           ###   ########.fr        #
+#    Updated: 2022/08/31 23:27:02 by qduong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := scavtrap
+NAME := scavtrap.bi
 
 CC := c++
 

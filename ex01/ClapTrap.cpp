@@ -88,7 +88,7 @@ void ClapTrap::attack(const std::string& target)
 	else
 	{
 		std::cout << "ClapTrap " << this->getName() << " attacks " << target 
-				  << " , causing " << this->getAtkdmg() << " points of damage!" << std::endl;
+				  << " , dealing " << this->getAtkdmg() << " points of damage!" << std::endl;
 		this->setEpoints(_epoints - 1);
 	}
 }
@@ -99,10 +99,11 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << this->getName() << " is already dead!" << std::endl;
 	else
 	{
-		if (amount > this->getHpoints())
+		if (amount >= this->getHpoints())
 		{
 			std::cout << "ClapTrap " << this->getName() << " took " << this->getHpoints() << " damage!" << std::endl;
 			this->setHpoints(0);
+			std::cout << "ClapTrap " << this->getName() << " Died" << std::endl;
 		}
 		else
 		{
