@@ -13,7 +13,7 @@ int main()
 	FragTrap Fraggy("Fraggy");
 	Fraggy.highFiveGuys();
 	pleb.setAtkdmg(900);
-	pleb.attack(Fraggy.getName());
+	Fraggy.attack(pleb.getName());
 	Fraggy.takeDamage(pleb.getAtkdmg());
 	Fraggy.highFiveGuys();
 	return (0);

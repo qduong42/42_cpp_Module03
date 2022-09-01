@@ -40,3 +40,25 @@ void FragTrap::highFiveGuys(void)
 	else
 		std::cout << "FragTrap dead, unable to high five" << std::endl;
 }
+
+/**
+ * @brief Implement a new attack function!
+ * 
+ */
+void FragTrap::attack(const std::string& target)
+{
+	if (this->getEpoints() < 1)
+	{
+		std::cout << "Not enough Energy Points to attack!" << std::endl;
+	}
+	if (this->getHpoints() <= 0)
+	{
+		std::cout << "FragTrap " << this->getName() << " is already dead" << std::endl;
+	}
+	else
+	{
+		std::cout << "FragTrap " << this->getName() << " attacks " << target 
+				  << " , dealing " << this->getAtkdmg() << " points of damage!" << std::endl;
+		this->setEpoints(this->_epoints - 1);
+	}
+}

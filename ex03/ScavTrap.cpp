@@ -63,6 +63,6 @@ void ScavTrap::attack(const std::string& target)
 	{
 		std::cout << "ScavTrap " << this->getName() << " attacks " << target 
 				  << " , dealing " << this->getAtkdmg() << " points of damage!" << std::endl;
-		this->setEpoints(_epoints - 1);
+		this->setEpoints(this->_epoints - 1);
 	}
 }

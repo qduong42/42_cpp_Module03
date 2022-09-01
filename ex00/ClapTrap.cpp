@@ -89,7 +89,7 @@ void ClapTrap::attack(const std::string& target)
 	{
 		std::cout << "ClapTrap " << this->getName() << " attacks " << target 
 				  << " , dealing " << this->getAtkdmg() << " points of damage!" << std::endl;
-		this->setEpoints(_epoints - 1);
+		this->setEpoints(this->_epoints - 1);
 	}
 }
 

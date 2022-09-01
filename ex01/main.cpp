@@ -15,11 +15,15 @@ int main()
 	Serena.attack(Ha.getName());
 	Ha.takeDamage(Serena.ClapTrap::getAtkdmg());
 	printClapTrapStat(Ha);
+	printClapTrapStat(Serena);
 	Serena.ScavTrap::attack(Ha.getName());
 	Ha.takeDamage(Serena.ClapTrap::getAtkdmg());
 	printClapTrapStat(Ha);
+	printClapTrapStat(Serena);
 	Serena.ClapTrap::attack(Ha.getName());
 	Ha.takeDamage(Serena.ClapTrap::getAtkdmg());
+	Ha.beRepaired(10);
 	printClapTrapStat(Ha);
+	printClapTrapStat(Serena);
 	return (0);
 }

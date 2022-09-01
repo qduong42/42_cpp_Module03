@@ -12,7 +12,8 @@ DiamondTrap::DiamondTrap(std::string nem): ClapTrap(nem + "_clap_name"), ScavTra
 	std::cout << "DiamondTrap " << this->_name << " has been activated!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const& obj):ClapTrap(obj.getName() + "_clap_name"), ScavTrap(obj.getName() + "_clap_name"), FragTrap(obj.getName() + "_clap_name")
+DiamondTrap::DiamondTrap(DiamondTrap const& obj):ClapTrap(obj.getName() + "_clap_name"), \
+ScavTrap(obj.getName() + "_clap_name"), FragTrap(obj.getName() + "_clap_name")
 {*this = obj;}
 
 DiamondTrap& DiamondTrap::operator=(DiamondTrap const& obj)

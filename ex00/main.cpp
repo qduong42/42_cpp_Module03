@@ -8,7 +8,7 @@ int main()
 	printClapTrapStat(Ha);
 	Tony.attack(Ha.getName());
 	Ha.takeDamage(Tony.getAtkdmg());
-	printClapTrapStat(Ha);
+	printClapTrapStat(Tony);
 	Ha.beRepaired(10);
 	printClapTrapStat(Ha);
 	return (0);
