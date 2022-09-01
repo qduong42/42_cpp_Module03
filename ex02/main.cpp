@@ -11,6 +11,10 @@ int main()
 {
 	ClapTrap pleb("pleb");
 	FragTrap Fraggy("Fraggy");
-	std::cout << Fraggy.getAtkdmg() << std::endl;
+	Fraggy.highFiveGuys();
+	pleb.setAtkdmg(900);
+	pleb.attack(Fraggy.getName());
+	Fraggy.takeDamage(pleb.getAtkdmg());
+	Fraggy.highFiveGuys();
 	return (0);
 }

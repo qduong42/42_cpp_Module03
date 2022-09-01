@@ -11,7 +11,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	printClapTrapStat(*this);
 }
 
-FragTrap::FragTrap(FragTrap const& obj)
+FragTrap::FragTrap(FragTrap const& obj): ClapTrap()
 {*this = obj;}
 
 FragTrap& FragTrap::operator=(FragTrap const& obj)
@@ -33,3 +33,10 @@ FragTrap::~FragTrap()
 
 //	MEMBER FUNCTIONS
 
+void FragTrap::highFiveGuys(void)
+{
+	if (this->_hpoints > 0)
+		std::cout << "FragTrap high fives their team mates" << std::endl;
+	else
+		std::cout << "FragTrap dead, unable to high five" << std::endl;
+}
