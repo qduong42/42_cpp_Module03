@@ -2,7 +2,7 @@
 
 //	CONSTRUCTORS | DESTRUCTOR
 
-ClapTrap::ClapTrap(std::string name):_name(name), _atkdmg(20), _hpoints(100), _epoints(50)
+ClapTrap::ClapTrap(std::string name):_name(name), _atkdmg(0), _hpoints(10), _epoints(10)
 {
 	std::cout << "BEEP BOOP Claptrap " << this->getName() << " activated!" << std::endl;
 	printClapTrapStat(*this);

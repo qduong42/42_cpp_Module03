@@ -14,9 +14,12 @@ class FragTrap : virtual public ClapTrap
 		FragTrap& operator=(FragTrap const& obj);
 		~FragTrap();
 		void highFiveGuys(void);
-	private:
 
+	protected:
 
+		static int const _initAtkdmg = 30;
+		static int const _initHpoints = 100;
+		static int const _initepoints = 100;
 };
 
 #endif

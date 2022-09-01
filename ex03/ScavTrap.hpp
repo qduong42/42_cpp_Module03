@@ -16,8 +16,11 @@ class ScavTrap: virtual public ClapTrap
 		void attack(const std::string& target);
 		void guardGate();
 
-	private:
+	protected:
 
+		static int const _initAtkdmg = 20;
+		static int const _initHpoints = 100;
+		static int const _initepoints = 50;
 };
 
 #endif

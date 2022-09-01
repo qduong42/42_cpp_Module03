@@ -8,7 +8,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->ClapTrap::setHpoints(100);
 	this->ClapTrap::setEpoints(100);
 	std::cout << "FragTrap " << this->ClapTrap::getName() << " has been activated!" << std::endl;
-	printClapTrapStat(*this);
+	// printClapTrapStat(*this);
 }
 
 FragTrap::FragTrap():ClapTrap()

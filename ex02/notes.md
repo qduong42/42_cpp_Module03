@@ -14,3 +14,7 @@ Questions:
 	- It would seem base class (inherited) values can be accessed with this->ClapTrap::_name
 
 2. Why can derived class be stored in base class pointer? Does the opposite work?( Seems no!) Down/upcast?
+
+3. Pure virtual functions: Dont allow creation of that class instance. Apparently the function itself can still be accessed if public through name resolver. e.g virtual void attack() = 0; ClapTrap class
+	- Diamond Trap inherit from ScavTrap public, inherit ClapTrap virtual: DiamondTrap.ClapTrap::attack
+		# To solve: Change to protected.

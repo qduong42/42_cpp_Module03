@@ -4,14 +4,15 @@
 
 DiamondTrap::DiamondTrap(std::string nem): ClapTrap(nem + "_clap_name"), ScavTrap(), FragTrap()
 {
-	this->name = nem;
-	this->FragTrap::setHpoints(FragTrap::_hpoints);
-	this->ScavTrap::setEpoints(ScavTrap::_Epoints);
-	this->FragTrap::setAtkdmg(ScavTrap::_Epoints);
-	std::cout << "DiamondTrap " << this->name << " has been activated!" << std::endl;
+	this->_name = nem;
+	this->setAtkdmg(FragTrap::_initAtkdmg);
+	this->setHpoints(FragTrap::_initHpoints);
+	this->setEpoints(ScavTrap::_initepoints);
+	// printClapTrapStat(*this);
+	std::cout << "DiamondTrap " << this->_name << " has been activated!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const& obj):ScavTrap(obj.getName() + "_clap_name"), FragTrap(obj.getName() + "_clap_name")
+DiamondTrap::DiamondTrap(DiamondTrap const& obj):ClapTrap(obj.getName() + "_clap_name"), ScavTrap(obj.getName() + "_clap_name"), FragTrap(obj.getName() + "_clap_name")
 {*this = obj;}
 
 DiamondTrap& DiamondTrap::operator=(DiamondTrap const& obj)
@@ -35,6 +36,6 @@ DiamondTrap::~DiamondTrap()
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "My name is " << this->name << std::endl;
+	std::cout << "My name is " << this->_name << std::endl;
 	std::cout << "My ClapTrap name is " << this->ClapTrap::getName() << std::endl;
 }

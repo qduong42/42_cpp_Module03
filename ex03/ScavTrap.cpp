@@ -4,6 +4,9 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	this->ClapTrap::setAtkdmg(20);
+	this->ClapTrap::setHpoints(100);
+	this->ClapTrap::setEpoints(50);
 	std::cout << "ScavTrap " << this->ClapTrap::getName() << " has been activated!" << std::endl;
 	// printClapTrapStat(*this);
 }

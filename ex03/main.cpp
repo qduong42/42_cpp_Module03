@@ -10,7 +10,7 @@ int main()
 {
 	DiamondTrap pleb("pleb");
 	pleb.setAtkdmg(900);
-	pleb.attack("someone");
+	pleb.ScavTrap::attack("someone");
 	pleb.whoAmI();
 	return (0);
 }
