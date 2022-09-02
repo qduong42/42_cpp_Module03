@@ -8,11 +8,13 @@
  */
 int main()
 {
-	DiamondTrap pleb("pleb");
-	pleb.setAtkdmg(900);
-	pleb.ScavTrap::attack("someone");
-	pleb.guardGate();
-	pleb.highFiveGuys();
-	pleb.whoAmI();
+	ScavTrap *pointer = new DiamondTrap ("James");
+	// DiamondTrap pleb("pleb");
+	// pleb.setAtkdmg(900);
+	// pleb.ScavTrap::attack("someone");
+	// pleb.guardGate();
+	// pleb.highFiveGuys();
+	// pleb.whoAmI();
+	delete pointer;
 	return (0);
 }
